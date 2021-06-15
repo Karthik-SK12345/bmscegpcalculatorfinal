@@ -13,12 +13,12 @@ app.use(expresslayouts);
 app.set('view engine', 'ejs');
 
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(emailRoutes.routes);
 
 
-const PORT = process.env.PORT || 4000
-app.listen(PORT);
+ const PORT = process.env.PORT || 4000
+  app.listen(PORT);
